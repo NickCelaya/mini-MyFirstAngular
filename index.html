@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="friendsList">
+
+<head>
+    <meta charset="utf-8">
+    <title>mini first Angular</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <div>
+        <h1 ng-repeat="friend in friends">  <!--ng repeat is sort of a loop. / friend in friends is like var key in obj -->
+        <p>{{friend}}</p>
+
+        </h1>
+
+        <input ng-model="newItem" placeholder="Add new item">
+        <!--input space -->
+        <button ng-click="friends.push(newItem)"></button>
+        <!--button pushing new item to ours friends array  -->
+        <!-- ng model binds an input,  so newItem is bound to friends.push which pushes new items onto our friends list -->
+
+    </div>
+
+
+    <div>
+        <h1 ng-repeat="gun in guns">  <!--ng repeat is sort of a loop. / friend in friends is like var key in obj -->
+        <p>{{gun}}</p>
+
+        </h1>
+
+        <input ng-model="newthing" placeholder="Add new item">
+        <button ng-click="guns.push(newthing)"></button>
+        <!--button pushing newthing to our guns array  -->
+        <!-- ng model binds an input, so newthing is bound to guns.push which pushes items onto our guns list -->
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- linked css -->
+<!-- added three scripts that link [angular cdn, js/apps.js, js/mainCtrl.js] -->
