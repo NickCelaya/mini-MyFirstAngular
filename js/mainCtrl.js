@@ -1,9 +1,17 @@
 angular.module("friendsList").controller("mainCtrl", function($scope) {
 
-    $scope.friends = ["JD", "Colton", "Nick", "Jessica", "Michael"];
-    $scope.guns = ["AI", "Creedmoor", "Silencers"];
-    // $scope.addfriend = push();
+    $scope.friends = ["Nick", "JD", "Colton", "Doc Holliday"];
+
+    console.log($scope.friends);
+
+    $scope.addFriend = function(str) {
+        $scope.friends.push(str);
+    };
+
+    console.log($scope.addFriend);
+
 });
+
 
 
 /// need help creating the addfriend function that pushes another friend onto the array.
